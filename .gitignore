@@ -1,0 +1,101 @@
+# https://git-scm.com/docs/gitignore
+
+# Archives
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.tgz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.cab
+*.iso
+*.tar
+
+# Backup and temp files
+*~
+*.bak
+*.old
+*.ori
+*.SAVE
+*.tmp
+
+# Diffs and patches
+*.patch
+*.diff
+*.orig
+*.rej
+
+# Logs and output
+*.log
+*.out
+
+# Detritus
+.debug
+.quiet
+
+####################
+# ansible-playbook artifacts
+*.retry
+
+####################
+# Vi or Vim text editor artifacts
+[._]*~
+[._]#*
+[._]*.sw[a-p]
+[._]sw[a-p]
+[._]*.un~
+Session.vim
+Sessionx.vim
+
+####################
+# Microsoft Visual Studio Code artifacts
+.vscode
+
+####################
+# https://github.com/github/gitignore/blob/master/Global/Linux.gitignore
+
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+####################
+# https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+

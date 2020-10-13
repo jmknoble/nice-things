@@ -1,0 +1,14 @@
+default_context:
+  category: general
+  description: 'macOS: Renice processes that behave poorly (we *can* have nice things!)'
+  destination: github
+  git_base_url: https://github.com/jmknoble
+  git_project: nice-things
+  git_url: https://github.com/jmknoble/nice-things
+  package_name: nice_things
+  project_name: nice-things
+  project_type: generic
+  team_email: jmknoble@pobox.com
+  team_name: Jim Knoble
+  title: Nice Things
+  version: 0.1.0

@@ -1,0 +1,92 @@
+# http://editorconfig.org
+
+root = true
+
+# Defaults; if these don't work, add an entry for the relevant filetype rather than modifying these
+
+[*]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+end_of_line = lf
+
+# Text filetypes
+
+[*.md]
+indent_style = space
+indent_size = 4
+max_line_length = 78
+trim_trailing_whitespace = false
+
+[*.rst]
+indent_style = space
+indent_size = 4
+
+[*.txt]
+indent_style = space
+indent_size = 4
+
+# Config filetypes
+
+[*.{cfg,conf,toml}]
+indent_style = space
+indent_size = 4
+
+[*.ini]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+
+[{pytest,tox}.ini]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+
+# "Braceless" filetypes
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{yaml,yml,cookiecutterrc,yamllint}]
+indent_style = space
+indent_size = 2
+
+# "Braceful" filetypes
+
+[*.{json,jsbeautifyrc}]
+indent_style = space
+indent_size = 2
+
+# Unix filetypes
+
+[*.sh]
+indent_style = space
+indent_size = 4
+
+# Windows filetypes
+
+[*.{bat,cmd}]
+end_of_line = crlf
+
+[*.cs]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+
+[*.{csproj,vspscc}]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+
+# Special filetypes
+
+[LICENSE]
+insert_final_newline = false
+
+[Makefile]
+indent_style = tab
+indent_size = 8
