@@ -5,6 +5,9 @@ set -u
 
 PATH="/bin:/usr/bin:/sbin:/usr/sbin"
 
+SUDO_PROMPT="%u@%h's password:"
+export SUDO_PROMPT
+
 DEFAULT_PROCESS_NAMES='
     iCoreService
     mdworker
