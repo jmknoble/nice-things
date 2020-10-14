@@ -10,11 +10,11 @@ macOS: Renice processes that behave poorly (we *can* have nice things!)
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
 - [What Is It For?](#what-is-it-for)
-- [What Does It Do?](#what-does-it-do)
+- [How Does It Work?](#how-does-it-work)
 - [How to Install](#how-to-install)
-    - [What Will It Do?](#what-will-it-do)
-    - [Bare Minimum Installation](#bare-minimum-installation)
-    - [Installing to Run in the Background](#installing-to-run-in-the-background)
+    - [What Will Happen?](#what-will-happen)
+    - [Bare Minimum Install](#bare-minimum-install)
+    - [Installing with a Periodic Schedule](#installing-with-a-periodic-schedule)
 - [Customizing the Schedule](#customizing-the-schedule)
 - [Customizing the Process Names](#customizing-the-process-names)
 - [References](#references)
@@ -37,20 +37,21 @@ macOS: Renice processes that behave poorly (we *can* have nice things!)
 
 ## What Is It For?
 
-macOS likes to do things like Spotlight indexing while the computer is on.
-Sometimes, these activities happen while we humans want to do other things
-with our Macs, but the activities are "bad neighbors" and use too many system
-resources (like CPU).
+macOS likes to do some things---for example, Spotlight indexing---while a
+Mac is turned on.  Sometimes, these activities happen while we humans want to
+do other things with our Macs, but the activities are "bad neighbors" and use
+too many system resources (like CPU).
 
-If your Mac is running an anti-virus scanning program, that may also be a bad
-neighbor, taking all the available CPU to get through a scan as fast as
+If your Mac is running an anti-virus scanning program, for example, it may be
+overexuberant, taking all the available CPU to get through a scan as fast as
 possible.
 
 **nice-things** helps by changing the *scheduling priority* of certain
-processes to make them "less important".
+processes to make them "less important" and give CPU time back to the things
+*we* want to do.
 
 
-## What Does It Do?
+## How Does It Work?
 
 Summary:
 
@@ -67,6 +68,7 @@ $
 2. Check each found process's priority.
 3. If a process's priority is "too important", change its priority to make it
    less important.
+4. If you want, write messages to the system log indicating what it's doing.
 
 To do this, **nice-things** uses CLI commands called [pgrep][] (to find
 matching processes), [ps][] (to find a process's priority) and [renice][] (to
@@ -94,7 +96,7 @@ something else.
 requires a shell prompt in a Terminal window.
 
 
-### What Will It Do?
+### What Will Happen?
 
 You can see what `install.sh` will do without doing it by using the
 `--dry-run` option:
@@ -111,7 +113,7 @@ $
 ```
 
 
-### Bare Minimum Installation
+### Bare Minimum Install
 
 To install just the `nice-things` command, use:
 
@@ -123,7 +125,7 @@ different prefix.  For example:
     ./install.sh --prefix /opt/nice-things
 
 
-### Installing to Run in the Background
+### Installing with a Periodic Schedule
 
 To install both the `nice-things` command and the [crontab][] schedule for
 periodically running in the background, use:
